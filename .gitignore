@@ -102,6 +102,7 @@ activemq-data/
 
 # Environments
 .env
+<<<<<<< HEAD
 .envrc
 .venv
 env/
@@ -162,3 +163,15 @@ tmp/
 .env
 .env.local
 .env.*.local
+.env.local
+node_modules/
+_tmp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+coverage/
+.nyc_output/
+.vercel/
+neuro-teacher-pro/

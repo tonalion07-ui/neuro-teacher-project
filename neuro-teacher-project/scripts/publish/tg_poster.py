@@ -44,13 +44,37 @@ CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 API_BASE = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 # Лимит Telegram на длину подписи к фото (sendPhoto).
+# Запас 4 символа между MAX_CAPTION и реальным лимитом 1024 — на всякий случай.
 MAX_CAPTION = 1024
+# Жёсткий лимит для предупреждения: если после очистки markdown
+# остаётся больше MAX_CAPTION_WARN, печатаем предупреждение.
+MAX_CAPTION_WARN = 1020
+
+
+def strip_markdown(text: str) -> str:
+    """Убирает Markdown-маркеры жирного (**) и курсива (_).
+
+    Telegram по умолчанию НЕ парсит Markdown в caption под фото
+    (parse_mode не передан), поэтому **жирный** и _курсив_ отображаются
+    буквально. Эта функция чистит артефакты ПЕРЕД отправкой.
+
+    Ограничения:
+      - "_" в snake_case/chat_id тоже удаляется. В русскоязычных
+        постах канала этого нет, но если встретится — будет съедено.
+      - "__жирный__" (двойной underscore) уберётся, текст склеится.
+    """
+    text = text.replace("**", "")
+    text = text.replace("_", "")
+    return text
 
 
 def send_message(text: str) -> dict:
     """Отправка plain-текста в канал."""
     if not BOT_TOKEN or not CHAT_ID:
         raise RuntimeError("Нет TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID в .env")
+    # Лимит Telegram sendMessage — 4096 символов.
+    if len(text) > 4096:
+        raise RuntimeError(f"Текст слишком длинный: {len(text)} > 4096")
 
     response = requests.post(
         f"{API_BASE}/sendMessage",
@@ -131,6 +155,30 @@ def publish_post(text_path: str, image_path: str | None = None) -> dict:
             continue
         cleaned.append(line)
     text = "\n".join(cleaned).strip()
+
+    # === Двойная проверка длины (до и после очистки markdown) ===
+    raw_len = len(text)
+    if raw_len > MAX_CAPTION:
+        sys.exit(
+            f"[FATAL] Тело поста {raw_len} символов превышает лимит "
+            f"{MAX_CAPTION} ДО очистки markdown. Сократи черновик вручную."
+        )
+
+    # Чистим markdown-артефакты (**жирный**, _курсив_)
+    text = strip_markdown(text)
+
+    final_len = len(text)
+    if final_len > MAX_CAPTION:
+        sys.exit(
+            f"[FATAL] Тело поста {final_len} символов превышает лимит "
+            f"{MAX_CAPTION} ПОСЛЕ очистки markdown. Сократи черновик вручную."
+        )
+    if final_len > MAX_CAPTION_WARN:
+        print(
+            f"[WARN] Тело {final_len} симв — запас всего "
+            f"{MAX_CAPTION - final_len} символов до лимита {MAX_CAPTION}"
+        )
+    # === Конец двойной проверки ===
 
     if image_path:
         result = send_photo(image_path, text)

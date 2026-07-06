@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Входим через VK ID… — Нейроучитель</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .callback {
+      min-height: 70vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 48px 20px; text-align: center;
+    }
+    .callback__spinner {
+      width: 56px; height: 56px;
+      border: 5px solid var(--c-border);
+      border-top-color: var(--c-primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 24px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .callback__title { font-size: 1.4rem; margin: 0 0 8px; }
+    .callback__sub { color: var(--c-muted); max-width: 480px; }
+    .callback__error {
+      background: #fef2f2; border: 1px solid #fecaca;
+      color: #991b1b; padding: 16px 20px; border-radius: 12px;
+      max-width: 520px; margin-top: 24px;
+    }
+    .callback__btn {
+      display: inline-block; margin-top: 16px;
+      padding: 12px 24px; background: var(--c-primary); color: #fff;
+      border-radius: 12px; font-weight: 600; text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="callback">
+    <div class="callback__spinner" id="spinner" aria-hidden="true"></div>
+    <h1 class="callback__title" id="title">Завершаем вход через VK ID…</h1>
+    <p class="callback__sub" id="sub">Это занимает пару секунд. Не закрывайте вкладку.</p>
+    <div class="callback__error" id="error" hidden></div>
+    <a class="callback__btn" href="index.html" id="back" hidden>← На главную</a>
+  </main>
+
+  <script>
+    (async function () {
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get("code");
+      const state = params.get("state");
+      const error = params.get("error");
+
+      const title = document.getElementById("title");
+      const sub = document.getElementById("sub");
+      const spinner = document.getElementById("spinner");
+      const errBox = document.getElementById("error");
+      const back = document.getElementById("back");
+
+      function fail(msg) {
+        spinner.hidden = true;
+        title.textContent = "Не удалось войти";
+        sub.textContent = "Попробуйте ещё раз с главной страницы.";
+        errBox.hidden = false;
+        errBox.textContent = msg;
+        back.hidden = false;
+      }
+
+      if (error) {
+        fail("VK ID вернул ошибку: " + error);
+        return;
+      }
+      if (!code || !state) {
+        fail("В URL нет параметров code/state. Возможно, ссылка повреждена.");
+        return;
+      }
+
+      const expectedState = sessionStorage.getItem("vk_oauth_state");
+      const codeVerifier = sessionStorage.getItem("vk_oauth_verifier");
+      const deviceId = sessionStorage.getItem("vk_oauth_device_id");
+
+      if (!expectedState || expectedState !== state) {
+        fail("Не совпадает state. Возможно, открыт устаревший редирект.");
+        return;
+      }
+      if (!codeVerifier) {
+        fail("Не найден code_verifier в браузере. Попробуйте войти снова.");
+        return;
+      }
+
+      try {
+        const r = await fetch("/api/vk-token", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            code: code,
+            code_verifier: codeVerifier,
+            device_id: deviceId,
+            redirect_uri: window.location.origin + "/oauth-callback.html",
+          }),
+        });
+
+        const data = await r.json();
+
+        if (!r.ok || !data.access_token) {
+          throw new Error(data.error || "Сервер не вернул access_token");
+        }
+
+        sessionStorage.setItem("vk_access_token", data.access_token);
+        sessionStorage.setItem("vk_user_id", String(data.user_id || ""));
+        sessionStorage.setItem("vk_expires_at", String(Date.now() + (data.expires_in || 0) * 1000));
+
+        sessionStorage.removeItem("vk_oauth_state");
+        sessionStorage.removeItem("vk_oauth_verifier");
+        sessionStorage.removeItem("vk_oauth_device_id");
+
+        window.location.replace("index.html?vk_login=success");
+      } catch (e) {
+        fail("Ошибка обмена кода: " + e.message);
+      }
+    })();
+  </script>
+</body>
+</html>

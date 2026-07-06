@@ -1,0 +1,57 @@
+{
+  "date": "2026-06-23",
+  "iteration": 2,
+  "posts": [
+    {
+      "file": "content/posts/published/2026-06-23-neuroteacher-chatgpt-teachers.md",
+      "status": "needs_revision",
+      "word_count": 286,
+      "checks": {
+        "hook_present": true,
+        "teacher_benefit_present": true,
+        "methodology_present": true,
+        "audience_question_present": true,
+        "hashtags_present": true,
+        "in_range_300_500": false,
+        "no_hype": true,
+        "rf_relevant_only": true
+      },
+      "comments": "Хорошо: отечественные сервисы (YandexGPT, GigaChat, Yandex Диск, VK Cloud) поданы как прямая замена западным, тон ровный, без хайпа. Поправить: 1) длина ниже 300 слов (≈286) — не хватает 15-20 слов; 2) заголовок обещает «что мы получаем, а что теряем», но блок «что теряем» в тексте не раскрыт — добавить отдельный мини-абзац после «Что это значит для вас» про риски слепого доверия модели: потеря авторской позиции учителя, зависимость от подрядчика, утечка ученических данных при неаккуратной загрузке; 3) шаг 2 методики усилить конкретикой — показать 1-2 примера дескрипторов рубрики (например, для уровня «базовый» и «углублённый»).",
+      "image_prompt": "Teacher organizing digital folders on a laptop, separating work materials from personal items, clean desk, flat vector illustration, blue and orange, no text"
+    },
+    {
+      "file": "content/posts/published/2026-06-23-neuroteacher-time-savings.md",
+      "status": "approved",
+      "word_count": 350,
+      "checks": {
+        "hook_present": true,
+        "teacher_benefit_present": true,
+        "methodology_present": true,
+        "audience_question_present": true,
+        "hashtags_present": true,
+        "in_range_300_500": true,
+        "no_hype": true,
+        "rf_relevant_only": true
+      },
+      "comments": "Сильный пост: хук про «23:00, тетради пятых классов» сразу попадает в опыт учителя. Конкретные цифры экономии (30-50%, 40%, 60%) и 5-шаговая методика с «дневником бюрократии» практичны и воспроизводимы. Готовый пример промпта по характеристике класса — копируется сразу. Вопрос про выгорание попадает в боль ЦА. Источник западный, но методология универсальна и работает с YandexGPT/GigaChat.",
+      "image_prompt": "Teacher crossing off administrative tasks on a large clipboard, an hourglass beside them showing time saved, flat vector, blue and orange, no text"
+    },
+    {
+      "file": "content/posts/published/2026-06-23-neuroteacher-assessment-ai.md",
+      "status": "approved",
+      "word_count": 361,
+      "checks": {
+        "hook_present": true,
+        "teacher_benefit_present": true,
+        "methodology_present": true,
+        "audience_question_present": true,
+        "hashtags_present": true,
+        "in_range_300_500": true,
+        "no_hype": true,
+        "rf_relevant_only": true
+      },
+      "comments": "Сильная аналитика: три слоя нового оценивания (письменная часть + устная защита + лист рассуждений) поданы как рабочая методика, а не лозунг. Хук «узнаёте стиль модели» точно попадает в боль учителя. Готовый пример листа рассуждений по русскому (9 класс) — копируется сразу, привязан к предмету. Вопрос с тремя вариантами барьеров (время / администрация / привычка) провоцирует дискуссию. Источник Ars Technica, но AI-resilient assessment — универсальная концепция.",
+      "image_prompt": "Teacher conducting an oral defense with a student at a blackboard, question marks floating between them, flat vector, blue and orange, no text"
+    }
+  ]
+}

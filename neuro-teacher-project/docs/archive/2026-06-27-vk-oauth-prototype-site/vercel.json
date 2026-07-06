@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/vk-token.js": {
+      "maxDuration": 10
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "topic": "AI в школе",
+  "date": "2026-06-23",
+  "news": [
+    {
+      "title": "AI Won't Replace Educators. But It is Changing How Students Learn.",
+      "source": "EdSurge",
+      "url": "https://www.edsurge.com/news/ai-wont-replace-educators-but-it-is-changing-how-students-learn",
+      "summary": "Terri Taylor examines how AI is reshaping student engagement with learning even as teachers remain essential, arguing that the role of educators shifts toward facilitation, curation, and human connection.",
+      "relevance": "high"
+    },
+    {
+      "title": "AI and the futures of education",
+      "source": "UNESCO",
+      "url": "https://www.unesco.org/en/articles/ai-and-futures-education",
+      "summary": "UNESCO frames a global pulse-check on AI in education, publishing divergent perspectives on disruptions, dilemmas, and directions. Builds on UNESCO's ethics recommendation, generative-AI guidance, and twin competency frameworks for teachers and students.",
+      "relevance": "high"
+    },
+    {
+      "title": "How AI is giving Northern Ireland teachers time back",
+      "source": "Google DeepMind Blog",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-classroom-northern-ireland/",
+      "summary": "Google DeepMind piece by Lila Ibrahim on how AI is providing concrete time savings for K-12 teachers in Northern Ireland classrooms, with a focus on lesson preparation and administrative load.",
+      "relevance": "high"
+    },
+    {
+      "title": "OpenAI launches free ChatGPT for Teachers workspace for U.S. K-12 educators",
+      "source": "EdTech Innovation Hub",
+      "url": "https://www.edtechinnovationhub.com/news/openai-launches-chatgpt-for-teachers-as-free-k12-workspace-across-the-united-states",
+      "summary": "OpenAI introduced a free, educator-specific ChatGPT workspace for verified U.S. K-12 teachers, running through June 2027, with data security, curriculum tools, and Microsoft 365/Google Drive integration.",
+      "relevance": "high"
+    },
+    {
+      "title": "State K-12 AI Policy in 2026: Milestones, Momentum and Missing Links",
+      "source": "ExcelinEd",
+      "url": "https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/",
+      "summary": "Examines how AI is moving into K-12 classrooms through tutoring and content tools, with state-level policy responses gaining momentum but still missing key guardrails around data, assessment, and equity.",
+      "relevance": "high"
+    },
+    {
+      "title": "To teach in the time of ChatGPT is to know pain",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/science/2026/04/to-teach-in-the-time-of-chatgpt-is-to-know-pain/",
+      "summary": "Reports on the growing burden for instructors who increasingly act as detectives as students offload work to generative AI, reshaping assessment design and classroom dynamics in 2026.",
+      "relevance": "high"
+    },
+    {
+      "title": "Call for Entries: The AI for Education Awards 2026 (AI4EDU26)",
+      "source": "UNESCO IITE",
+      "url": "https://iite.unesco.org/announcements/join-the-ai-for-education-awards-2026/",
+      "summary": "UNESCO IITE opened global K-12 awards recognizing impactful and responsible uses of AI in schools, inviting entries from institutions, NGOs, and individuals. Posted May 18, 2026.",
+      "relevance": "medium"
+    }
+  ]
+}

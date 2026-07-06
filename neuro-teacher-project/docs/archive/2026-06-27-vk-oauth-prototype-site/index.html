@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Нейроучитель — методички и конспекты через нейросети для педагогов</title>
+  <meta name="description" content="Помогаем педагогам создавать учебные материалы через нейросети и обучаем работе с AI с нуля." />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Нейроучитель — методички и обучение нейросетям для педагогов" />
+  <meta property="og:description" content="Методички, конспекты, тесты и обучение работе с AI — для учителей." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <!-- [TODO: подготовить og-image 1200x630, положить в assets/] -->
+
+  <link rel="icon" href="assets/favicon.ico" />
+  <!-- [TODO: положить favicon.ico в assets/] -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#hero" aria-label="Нейроучитель — на главную">
+        <span class="logo__mark" aria-hidden="true">📘</span>
+        <span class="logo__text">Нейроучитель</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#benefits">Польза</a>
+        <a href="#trust">Доверие</a>
+        <a href="#cta">Связаться</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ====== 1. HERO ====== -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Для педагогов школ, колледжей и кружков</p>
+          <h1 id="hero-title" class="hero__title">
+            Методички и конспекты за минуты.<br />
+            Обучение нейросетям&nbsp;— с&nbsp;нуля.
+          </h1>
+          <p class="hero__subtitle">
+            Помогаем педагогам создавать учебные материалы через нейросети
+            и&nbsp;обучаем работе с&nbsp;AI в&nbsp;спокойном темпе&nbsp;— без жаргона
+            и&nbsp;без требования «быть технарём».
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="https://t.me/neuro_uchitel" target="_blank" rel="noopener">
+              Написать в Telegram
+            </a>
+            <a class="btn btn--ghost" href="assets/price.pdf" download>
+              <!-- [TODO: положить assets/price.pdf ] -->
+              Скачать прайс в PDF
+            </a>
+          </div>
+          <p class="hero__proof">
+            Бесплатно для&nbsp;учителей. Без&nbsp;рекламы и&nbsp;подписок.
+          </p>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__card">
+            <div class="hero__card-header">
+              <span class="hero__dot"></span><span class="hero__dot"></span><span class="hero__dot"></span>
+              <span class="hero__card-title">Методичка · Литература · 9 класс</span>
+            </div>
+            <div class="hero__card-body">
+              <p><strong>Тема урока:</strong> Конфликт поколений в «Грозе» А.&nbsp;Н.&nbsp;Островского</p>
+              <ul>
+                <li>Цели и&nbsp;планируемые результаты</li>
+                <li>Ход урока (45&nbsp;мин)</li>
+                <li>Раздаточные карточки&nbsp;— 6&nbsp;шт.</li>
+                <li>Проверочная работа</li>
+              </ul>
+              <p class="hero__card-foot">Сгенерировано Нейроучитель · 4&nbsp;мин</p>
+            </div>
+          </div>
+          <p class="hero__visual-caption">
+            <!-- [TODO: подготовить настоящий скриншот интерфейса или макет] -->
+            Демо-превью. Реальный макет появится позже.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 2. ПОЛЬЗА ====== -->
+    <section id="benefits" class="section" aria-labelledby="benefits-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="benefits-title">Что вы получите</h2>
+          <p class="section__sub">
+            Шесть направлений работы — каждое экономит часы и&nbsp;снимает рутину.
+          </p>
+        </header>
+        <ul class="cards">
+          <li class="card">
+            <div class="card__icon" aria-hidden="true">📝</div>
+            <h3>Готовые конспекты и&nbsp;методички</h3>
+            <p>Структура, план урока, раздаточные материалы. Берёте шаблон, подставляете свой предмет.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true">📚</div>
+            <h3>Задачи, тесты, карточки</h3>
+            <p>Генерация под конкретный класс и&nbsp;тему. Экономия 3–5&nbsp;часов в&nbsp;неделю.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true">🎨</div>
+            <h3>Презентации и&nbsp;визуал</h3>
+            <p>Слайды, иллюстрации, схемы по&nbsp;вашему тексту — без навыков дизайнера.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true">💡</div>
+            <h3>Разбор сложных тем простым языком</h3>
+            <p>Нейросеть объясняет так, чтобы понял ученик любого уровня.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true">🎓</div>
+            <h3>Обучение работе с&nbsp;AI с&nbsp;нуля</h3>
+            <p>Персональные консультации и&nbsp;групповые воркшопы, без технического жаргона.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true">🧩</div>
+            <h3>Под ваш предмет и&nbsp;класс</h3>
+            <p>
+              Физика, литература, физкультура, робототехника, ИЗО —
+              адаптируем под вашу специфику.
+              <!-- [TODO: проверить список предметов] -->
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====== 3. ДОВЕРИЕ ====== -->
+    <section id="trust" class="section section--alt" aria-labelledby="trust-title">
+      <div class="container">
+
+        <header class="section__head">
+          <h2 id="trust-title">Почему нам можно доверять</h2>
+          <p class="section__sub">
+            За&nbsp;сервисом&nbsp;— методика, педагогическая редактура и&nbsp;юридическая аккуратность.
+          </p>
+        </header>
+
+        <!-- Методология -->
+        <article class="trust-block">
+          <h3>Методология: адаптация сложных тем для гуманитариев</h3>
+          <p>
+            Мы&nbsp;специально работаем с&nbsp;педагогами, которые не&nbsp;являются технарями.
+            Каждый материал проходит три этапа контроля качества:
+          </p>
+          <ol class="trust-list">
+            <li>
+              <strong>Язык.</strong> Сложные концепции объясняются через метафоры
+              из&nbsp;школьной программы. Никакого технического жаргона.
+            </li>
+            <li>
+              <strong>Структура.</strong> Сценарий: задача&nbsp;→ план&nbsp;→ черновик&nbsp;→ редактура&nbsp;→ педагогическая вычитка.
+            </li>
+            <li>
+              <strong>Контроль качества.</strong> Итоговый текст сверяется с&nbsp;ФГОС,
+              терминологией предмета и&nbsp;возрастом учеников.
+            </li>
+          </ol>
+        </article>
+
+        <!-- Примеры тем для уроков -->
+        <article class="trust-block">
+          <h3>Примеры тем для уроков</h3>
+          <p>Несколько готовых сценариев — посмотрите, как это выглядит на&nbsp;практике:</p>
+          <ol class="trust-list">
+            <li>
+              <strong>Литература, 9&nbsp;класс.</strong> «Конфликт поколений в&nbsp;драме
+              А.&nbsp;Н.&nbsp;Островского “Гроза”» — методичка + раздаточные карточки + тест.
+            </li>
+            <li>
+              <strong>История, 10&nbsp;класс.</strong> «Реформы Петра&nbsp;I: причины,
+              ход, итоги» — план урока + презентация + задания для самостоятельной работы.
+            </li>
+            <li>
+              <strong>Биология, 8&nbsp;класс.</strong> «Кровеносная система человека» —
+              конспект + иллюстрации-схемы + проверочная работа.
+            </li>
+            <li>
+              <strong>Обществознание, 11&nbsp;класс.</strong> «Глобализация: плюсы
+              и&nbsp;минусы» — эссе с&nbsp;шаблоном аргументации + список источников.
+            </li>
+            <li>
+              <strong>Технология, 7&nbsp;класс.</strong> «Основы работы с&nbsp;нейросетями
+              в&nbsp;учебных проектах» — вводный урок + практикум.
+            </li>
+          </ol>
+          <p class="trust-foot">
+            <!-- [TODO: подтвердить или заменить реальными кейсами] -->
+            Запросите тему по&nbsp;своему предмету — и&nbsp;мы&nbsp;покажем, как это будет выглядеть.
+          </p>
+        </article>
+
+        <!-- Соответствие Минобрнауки -->
+        <article class="trust-block">
+          <h3>Соответствие требованиям Минобрнауки РФ</h3>
+          <ul class="trust-list">
+            <li>
+              Содержание согласуется с&nbsp;<strong>ФГОС</strong> (Федеральные
+              государственные образовательные стандарты) и&nbsp;примерными рабочими программами.
+            </li>
+            <li>
+              Возрастной ценз и&nbsp;тематика&nbsp;— без нарушений
+              <strong>ФЗ&nbsp;«Об&nbsp;образовании в&nbsp;РФ»</strong> (№&nbsp;273-ФЗ)
+              и&nbsp;<strong>ФЗ&nbsp;«О&nbsp;защите детей от&nbsp;информации»</strong> (№&nbsp;436-ФЗ).
+            </li>
+            <li>
+              AI&nbsp;используется в&nbsp;роли инструмента педагога; итоговую
+              ответственность за&nbsp;материал несёт преподаватель.
+            </li>
+            <li>
+              Источники и&nbsp;терминология проверяются вручную на&nbsp;этапе редактуры.
+            </li>
+          </ul>
+          <p class="trust-foot">
+            <!-- [TODO: получить юридическую вычитку формулировок] -->
+            Мы&nbsp;не&nbsp;подменяем учителя&nbsp;— мы&nbsp;ускоряем его&nbsp;работу.
+            Все материалы проходят педагогическую редактуру перед передачей.
+          </p>
+        </article>
+
+        <!-- Отзывы / кейсы -->
+        <article class="trust-block">
+          <h3>Отзывы педагогов</h3>
+          <ul class="reviews">
+            <li class="review review--placeholder">
+              <!-- [TODO: добавить реальные отзывы] -->
+              <blockquote>
+                «За&nbsp;один вечер получила готовый план на&nbsp;четверть по&nbsp;литературе.
+                Раньше на&nbsp;это уходила неделя».
+              </blockquote>
+              <p class="review__author">Учитель русского языка и&nbsp;литературы, школа, 5–9&nbsp;классы</p>
+            </li>
+            <li class="review review--placeholder">
+              <!-- [TODO: добавить реальные отзывы] -->
+              <blockquote>
+                «Студенты перестали бояться тему по&nbsp;экономике&nbsp;— нейросеть
+                разложила её&nbsp;так, что даже слабые потянули».
+              </blockquote>
+              <p class="review__author">Преподаватель колледжа, специальность «Экономика и&nbsp;бухгалтерский учёт»</p>
+            </li>
+            <li class="review review--placeholder">
+              <!-- [TODO: добавить реальные отзывы] -->
+              <blockquote>
+                «Объяснили работу с&nbsp;ИИ на&nbsp;пальцах&nbsp;— теперь сама готовлю
+                карточки для кружка по&nbsp;робототехнике».
+              </blockquote>
+              <p class="review__author">Педагог доп.&nbsp;образования, центр технического творчества</p>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Для кого подходит -->
+        <article class="trust-block trust-block--audience">
+          <h3>Для кого подходит</h3>
+          <ul class="audience">
+            <li><span aria-hidden="true">🏫</span><br />Школьный учитель</li>
+            <li><span aria-hidden="true">🎓</span><br />Преподаватель колледжа</li>
+            <li><span aria-hidden="true">🛠️</span><br />Педагог доп.&nbsp;образования</li>
+          </ul>
+          <p class="trust-foot">Не&nbsp;нужно уметь программировать.</p>
+        </article>
+
+        <!-- Цифры -->
+        <article class="trust-block trust-block--stats">
+          <h3>Цифры</h3>
+          <ul class="stats">
+            <li>
+              <span class="stats__num">3–5&nbsp;ч</span>
+              <span class="stats__label">экономия учителя в&nbsp;неделю</span>
+            </li>
+            <li>
+              <span class="stats__num">5</span>
+              <span class="stats__label">готовых предметов в&nbsp;методичках</span>
+            </li>
+            <li>
+              <span class="stats__num">0&nbsp;₽</span>
+              <span class="stats__label">бесплатно для&nbsp;учителей</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Примеры работ (превью) -->
+        <article class="trust-block">
+          <h3>Примеры работ</h3>
+          <div class="samples">
+            <figure class="sample sample--placeholder">
+              <!-- [TODO: подготовить assets/sample-1.webp — превью методички] -->
+              <div class="sample__img">Методичка</div>
+              <figcaption>PDF-методичка</figcaption>
+            </figure>
+            <figure class="sample sample--placeholder">
+              <!-- [TODO: подготовить assets/sample-2.webp — превью конспекта] -->
+              <div class="sample__img">Конспект</div>
+              <figcaption>Конспект урока</figcaption>
+            </figure>
+            <figure class="sample sample--placeholder">
+              <!-- [TODO: подготовить assets/sample-3.webp — превью карточек] -->
+              <div class="sample__img">Карточки</div>
+              <figcaption>Карточки для урока</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Прозрачность -->
+        <article class="trust-block trust-block--transparency">
+          <h3>Что AI&nbsp;не&nbsp;заменит</h3>
+          <p>
+            Живую работу с&nbsp;учеником, вашу экспертизу, авторский стиль.
+            Мы&nbsp;усиливаем педагога, а&nbsp;не&nbsp;подменяем его.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====== 4. CTA ====== -->
+    <section id="cta" class="section section--cta" aria-labelledby="cta-title">
+      <div class="container container--narrow">
+        <h2 id="cta-title">Готовы попробовать на&nbsp;своём предмете?</h2>
+        <p class="section__sub">
+          Напишите нам&nbsp;— подберём формат под вашу задачу: разовый материал,
+          серия методичек или обучение работе с&nbsp;AI.
+        </p>
+        <div class="cta__buttons">
+          <a class="btn btn--primary btn--lg" href="https://t.me/neuro_uchitel" target="_blank" rel="noopener">
+            Написать в Telegram
+          </a>
+          <a class="btn btn--secondary btn--lg" href="https://wa.me/Neuro_uchitel" target="_blank" rel="noopener">
+            Написать в WhatsApp
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#" data-vk-login>
+            <span aria-hidden="true">🔐</span> Войти через VK ID
+          </a>
+        </div>
+        <p class="cta__alt">
+          или <a href="assets/price.pdf" download>скачайте прайс в&nbsp;PDF</a>
+          <!-- [TODO: положить assets/price.pdf ] -->
+          — там примеры и&nbsp;тарифы.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== 5. КОНТАКТЫ + ФУТЕР ====== -->
+    <section id="contacts" class="section section--contacts" aria-labelledby="contacts-title">
+      <div class="container container--narrow">
+        <h2 id="contacts-title">Контакты</h2>
+        <ul class="contacts">
+          <li>
+            <span class="contacts__label">Telegram:</span>
+            <a href="https://t.me/neuro_uchitel" target="_blank" rel="noopener">
+              @neuro_uchitel
+            </a>
+          </li>
+          <li>
+            <span class="contacts__label">WhatsApp:</span>
+            <a href="https://wa.me/Neuro_uchitel" target="_blank" rel="noopener">
+              Neuro_uchitel
+            </a>
+          </li>
+          <li>
+            <span class="contacts__label">Email:</span>
+            <a href="mailto:vtab3@yandex.ru">
+              vtab3@yandex.ru
+            </a>
+          </li>
+          <!-- [TODO: добавить соцсети (VK, YouTube), если ведёте] -->
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© 2026 Нейроучитель. Все материалы&nbsp;— для образовательных целей.</p>
+      <p class="site-footer__legal">
+        Сайт носит информационный характер, не&nbsp;является публичной офертой.
+        <a href="privacy.html">Политика конфиденциальности</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA — появляется после прокрутки за Hero -->
+  <a class="sticky-cta" href="https://t.me/neuro_uchitel" target="_blank" rel="noopener" aria-label="Написать в Telegram" hidden>
+    <span aria-hidden="true">💬</span> Telegram
+  </a>
+
+  <script src="script.js" defer></script>
+  <script src="auth.js" defer></script>
+</body>
+</html>

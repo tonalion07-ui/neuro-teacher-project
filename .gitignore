@@ -175,3 +175,8 @@ coverage/
 .nyc_output/
 .vercel/
 neuro-teacher-pro/
+
+# Claude Code (личный конфиг) и отчёты
+CLAUDE.md
+reports/
+claude.md
